@@ -6,19 +6,19 @@ Example:
 using DeconstructPattern;
 namespace Test
 {
-	class Program
-	{
-		static void Main(string[] args)
-		{
-			var s = "TEST 10 P 1 2 3".Split(' ');
-			var parsed = s switch {
-				("TEST", var count, var flag, var rest) => (count, flag, string.Join(" ", rest)),
-				("INFO", var rest) => ("", "", string.Join(" ", rest)),
-				_ => throw new NotImplementedException(),
-			};
-			Console.WriteLine(parsed);
-		}
-	}
+  class Program
+  {
+    static void Main(string[] args)
+    {
+      var s = "TEST 10 P 1 2 3".Split(' ');
+      var parsed = s switch {
+        ("TEST", var count, var flag, var rest) => (count, flag, string.Join(" ", rest)),
+        ("INFO", var rest) => ("", "", string.Join(" ", rest)),
+        _ => throw new NotImplementedException(),
+      };
+      Console.WriteLine(parsed);
+    }
+  }
 }
 ```
 
