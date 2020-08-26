@@ -1,0 +1,9 @@
+*.dll
+*.pdb
+*.swp
+*.exe
+obj/
+bin/
+.idea/
+*.*~
+*.swp
